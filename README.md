@@ -2,7 +2,7 @@
   <img width="285" height="56" alt="banner" src="https://github.com/user-attachments/assets/3302abda-f35e-43cd-a6b6-635efdef3386" />
 </p>
 <p align="center">
-  <img width="250" height="400" alt="RavenRAT" src="https://github.com/user-attachments/assets/7d14d91c-75d7-4452-9384-9651003fffc2" />
+  <img width="250" height="400" alt="RavenRAT" src="https://github.com/user-attachments/assets/c31454e5-2d69-45cd-a5dd-7f37627c8a04" />
 </p>
 
 <p align="center">

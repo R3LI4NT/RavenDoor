@@ -9,6 +9,6 @@
   </a>
     <img src="https://img.shields.io/badge/System-Windows-B70000.svg">
   </a>
-    <img src="https://img.shields.io/badge/Private-%F0%9F%94%92-B70000.svg">
+    <img src="https://img.shields.io/badge/Public-%F0%9F%94%92-B70000.svg">
   </a>
 </p>

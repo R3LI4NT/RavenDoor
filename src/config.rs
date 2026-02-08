@@ -26,8 +26,8 @@ impl Default for Config {
     fn default() -> Self {
         Self {
             server: ServerConfig {
-                bind_addr: "190.134.212.212".to_string(), // TU IP PÚBLICA
-                port: 4444,
+                bind_addr: " ".to_string(), // TU IP PÚBLICA
+                port: 4444, // MODIFICAR PUERTO
                 max_connections: 10,
                 banner: true,
             },
@@ -56,4 +56,5 @@ pub fn save_config(config: &Config, path: &str) -> Result<(), Box<dyn std::error
     let content = toml::to_string_pretty(config)?;
     fs::write(path, content)?;
     Ok(())
+
 }

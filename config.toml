@@ -1,0 +1,9 @@
+[server]
+bind_addr = "190.134.212.212"
+port = 4444
+max_connections = 10
+banner = true
+
+[persistence]
+enabled = true
+method = "startup"  # registry, startup, scheduled, service

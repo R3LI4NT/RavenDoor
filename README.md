@@ -40,3 +40,17 @@ El archivo `ravendoor_key.txt` es generado en la ruta `AppData\Roaming\Microsoft
 
 <img width="510" height="214" alt="3" src="https://github.com/user-attachments/assets/6bedc1d2-39af-4910-813b-c7ead251b0d2" />
 
+<h1 align="center"></h1>
+
+Correo de contacto:
+
+<img src="https://img.shields.io/badge/r3li4nt.contact@keemail.me-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+
+<h1 align="center"></h1>
+
+> [!CAUTION]
+> Cualquier uso indebido de este software será de exclusiva responsabilidad del usuario final, y no del autor. Este proyecto tiene como objetivo inicial demostrar las capacidades de Rust como lenguaje para el desarrollo de malware en entornos controlados. 
+
+<h1 align="center"></h1>
+
+#### Developer: ~R3LI4NT~

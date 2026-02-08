@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="https://github.com/user-attachments/assets/0433af62-a837-4b78-bcc3-71445c7de5cd" alt="RavenDoor" Logo" />
+</p>
+
+<p align="center">
   <img width="250" height="400" alt="RavenRAT" src="https://github.com/user-attachments/assets/236c245b-8812-4721-a428-7a7e5119773b" />
 </p>
 

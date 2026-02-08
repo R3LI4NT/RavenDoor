@@ -1,9 +1,10 @@
 [server]
-bind_addr = "190.134.212.212"
-port = 4444
+bind_addr = " " # IP PÚBLICA
+port = 4444 # MODIFICAR PUERTO
 max_connections = 10
 banner = true
 
 [persistence]
 enabled = true
+
 method = "startup"  # registry, startup, scheduled, service

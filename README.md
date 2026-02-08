@@ -29,8 +29,8 @@
 
 <img src="https://img.shields.io/badge/C2:-B70000.svg"> Se desarrollo un C2 (Command & Control) en Python para escuchar las conexiones entrantes, gestiona múltiples clientes, permite seleccionar un cliente y enviarle comandos interactivos. La comunicación esta cifrada con AES-256 en modo CBC, usando una clave compartida pasada por parámetro y un IV que el cliente envía en el handshake. 
 
-`USO`
-```python
+**USO:**
+```python3
 python3 raven_client.py --key [KEY]
 ```
 

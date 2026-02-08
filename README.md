@@ -17,4 +17,26 @@
 
 ### Características de `RavenDoor`:
 
-<img src="https://img.shields.io/badge/ENCRIPTACIÓN:-B70000.svg"> Incluye un loader que carga y ejecuta los módulos (`EncryptModule.dll`, `SystemDiscovery.dll`, `ProcessKiller.dll`, `RClone.dll`, `Remover.dll`, `EDRKiller.dll`, `SMBSpreader.dll`, `Backdoor[svchost.dll]`)  directamente desde memoria, evitando que el archivo exista en el disco. Esta técnica reduce la superficie de detección y dificulta la ingeniería inversa. Para reforzar la protección, los archivos .DLL son ofuscados empleando múltiples técnicas (**Strings Encryption, Control Flow Obfuscation, Resource Encryption, Dead Code Injection, Metadata Pruning, Linking, PreMark, Anti-Debug, etc**).
+<img src="https://img.shields.io/badge/COMUNICACIÓN:-B70000.svg"> Genera una llave (AES-256-CBC) **ÚNICA** para cada usuario infectado. Con este cifrado, los firewalls, sistemas IDS/IPS o herramientas de monitoreo de red no podrán detectar los comandos en texto plano que envía el atacante, evitando activar alertas. Se implemento el algoritmo AES-256 para transformar estos comandos reconocibles en flujos de bytes aleatorios, mientras que el CBC asegura que incluso comandos idénticos produzcan salidas cifradas diferentes, eliminando patrones repetitivos que podrían servir como firmas de detección.
+
+<img width="1095" height="425" alt="2" src="https://github.com/user-attachments/assets/67130bbe-6acf-47c7-80a3-53f149127eb7" />
+
+<h1 align="center"></h1>
+
+<img src="https://img.shields.io/badge/PERSISTENCIA:-B70000.svg"> Implementa distintos mecanismos de persistencia en Windows para que el ejecutable se vuelva a iniciar automáticamente tras reinicios o cierres de sesión. A través del método indicada (registry, startup, scheduled o service), el programa obtiene la ruta de su propio ejecutable y la registra para ejecutarse al inicio del sistema: puede crear una clave en el registro de usuario (Run), copiarse en la carpeta Startup, crear una tarea programada al iniciar sesión (intentando ejecutarse como SYSTEM) o instalarse como servicio de Windows con inicio automático. Si un método falla, el código intenta otros alternativos como respaldo.
+
+<h1 align="center"></h1>
+
+<img src="https://img.shields.io/badge/C2:-B70000.svg"> Se desarrollo un C2 (Command & Control) en Python para escuchar las conexiones entrantes, gestiona múltiples clientes, permite seleccionar un cliente y enviarle comandos interactivos. La comunicación esta cifrada con AES-256 en modo CBC, usando una clave compartida pasada por parámetro y un IV que el cliente envía en el handshake. 
+
+`USO`
+```python
+python3 raven_client.py --key [KEY]
+```
+
+<img width="1113" height="682" alt="1" src="https://github.com/user-attachments/assets/8267e2cd-6926-4f70-90ca-248483f4a9d6" />
+
+El archivo `ravendoor_key.txt` es generado en la ruta `AppData\Roaming\Microsoft\Windows` y es envíado al canal de telegram para su posterior uso.
+
+<img width="510" height="214" alt="3" src="https://github.com/user-attachments/assets/6bedc1d2-39af-4910-813b-c7ead251b0d2" />
+

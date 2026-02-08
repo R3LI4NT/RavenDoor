@@ -103,7 +103,7 @@ impl TelegramBot {
     }
 }
 
-// Función de utilidad para crear el bot desde variables de entorno
+// Función para crear el bot desde variables de entorno
 pub fn create_bot_from_env() -> Option<TelegramBot> {
     let bot_token = std::env::var("TELEGRAM_BOT_TOKEN").ok()?;
     let chat_id = std::env::var("TELEGRAM_CHAT_ID").ok()?;
@@ -111,10 +111,10 @@ pub fn create_bot_from_env() -> Option<TelegramBot> {
     Some(TelegramBot::new(&bot_token, &chat_id))
 }
 
-// Función alternativa para crear bot con valores hardcoded (PARA PRUEBAS)
 pub fn create_bot_hardcoded() -> TelegramBot {
     TelegramBot::new(
-        " ", // Tu token REAL
-        " " // Tu chat ID REAL
+        " ", // Tu token del BOT
+        " " // Tu chat ID del BOT
     )
+
 }

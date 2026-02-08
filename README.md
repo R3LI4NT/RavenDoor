@@ -42,6 +42,26 @@ El archivo `ravendoor_key.txt` es generado en la ruta `AppData\Roaming\Microsoft
 
 <h1 align="center"></h1>
 
+### Modo de uso
+
+- (1) Tener instalado Rust: https://rust-lang.org/tools/install/
+
+- (2) Modificar los archivos config.toml, main.rs y config.rs para agregar nuestras IPs y puerto a escuchar.
+
+<img width="351" height="118" alt="4-0" src="https://github.com/user-attachments/assets/c5ac7947-1a06-495c-ba76-eb5d3a32e04e" />
+
+<img width="523" height="156" alt="4-1" src="https://github.com/user-attachments/assets/9cedc726-d38f-475e-953c-c146ae731248" />
+
+<img width="584" height="189" alt="4-2" src="https://github.com/user-attachments/assets/33b16a54-a3a6-4509-9fde-9094557c649c" />
+
+
+- (3) Compilar proyecto en modo release desde la raíz.
+```
+cargo build --release
+```
+
+<h1 align="center"></h1>
+
 Correo de contacto:
 
 <img src="https://img.shields.io/badge/r3li4nt.contact@keemail.me-D14836?style=for-the-badge&logo=gmail&logoColor=white" />

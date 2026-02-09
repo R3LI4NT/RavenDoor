@@ -50,7 +50,7 @@ El archivo `ravendoor_key.txt` es generado en la ruta `AppData\Roaming\Microsoft
 
 - (1) Tener instalado Rust: https://rust-lang.org/tools/install/
 
-- (2) Modificar los archivos config.toml, main.rs y config.rs para agregar nuestras IPs y puerto a escuchar.
+- (2) Modificar los archivos `config.toml`, `main.rs` y `config.rs` para agregar nuestras IPs y puerto a escuchar.
 
 <img width="351" height="118" alt="4-0" src="https://github.com/user-attachments/assets/c5ac7947-1a06-495c-ba76-eb5d3a32e04e" />
 
@@ -58,8 +58,11 @@ El archivo `ravendoor_key.txt` es generado en la ruta `AppData\Roaming\Microsoft
 
 <img width="584" height="189" alt="4-2" src="https://github.com/user-attachments/assets/33b16a54-a3a6-4509-9fde-9094557c649c" />
 
+- (3) Generar un Bot en Telegram y agregar el Token y ChatID en el archivo telegram.rs.
 
-- (3) Compilar proyecto en modo release desde la raíz.
+<img width="408" height="138" alt="5" src="https://github.com/user-attachments/assets/9d97ea5c-8d85-4ee3-bdaa-a79a8f88a98c" />
+
+- (4) Compilar proyecto en modo release desde la raíz.
 ```
 cargo build --release
 ```

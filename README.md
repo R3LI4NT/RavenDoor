@@ -62,6 +62,8 @@ El archivo `ravendoor_key.txt` es generado en la ruta `AppData\Roaming\Microsoft
 
 <img width="408" height="138" alt="5" src="https://github.com/user-attachments/assets/9d97ea5c-8d85-4ee3-bdaa-a79a8f88a98c" />
 
+**IMPORTANTE:** La función `create_bot_from_env` no debe ser modificada por el Token ni ChatID.
+
 - (4) Compilar proyecto en modo release desde la raíz.
 ```
 cargo build --release

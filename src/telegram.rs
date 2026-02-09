@@ -111,10 +111,11 @@ pub fn create_bot_from_env() -> Option<TelegramBot> {
     Some(TelegramBot::new(&bot_token, &chat_id))
 }
 
-// Función alternativa para crear bot con valores hardcoded (PARA PRUEBAS)
+
 pub fn create_bot_hardcoded() -> TelegramBot {
     TelegramBot::new(
         " ", // Tu token REAL
         " " // Tu chat ID REAL
     )
+
 }

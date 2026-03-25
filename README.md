@@ -13,13 +13,15 @@
   </a>
     <img src="https://img.shields.io/badge/System-Windows-B70000.svg">
   </a>
+    <img src="https://img.shields.io/badge/Version-1.0-B70000.svg">
+  </a>
     <img src="https://img.shields.io/badge/Public-%F0%9F%97%9D%EF%B8%8F-B70000.svg">
   </a>
 </p>
 
 <h1 align="center"></h1>
 
-### Características de `RavenDoor`:
+### Características de `RavenDoor v1.0`:
 
 <img src="https://img.shields.io/badge/COMUNICACIÓN:-B70000.svg"> Genera una llave (AES-256-CBC) **ÚNICA** para cada usuario infectado. Con este cifrado, los firewalls, sistemas IDS/IPS o herramientas de monitoreo de red no podrán detectar los comandos en texto plano que envía el atacante, evitando activar alertas. Se implemento el algoritmo AES-256 para transformar estos comandos reconocibles en flujos de bytes aleatorios, mientras que el CBC asegura que incluso comandos idénticos produzcan salidas cifradas diferentes, eliminando patrones repetitivos que podrían servir como firmas de detección.
 

@@ -75,12 +75,7 @@ cargo build --release
 
 Correo de contacto:
 
-<img src="https://img.shields.io/badge/r3li4nt.contact@keemail.me-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-
-<h1 align="center"></h1>
-
-> [!CAUTION]
-> Cualquier uso indebido de este software será de exclusiva responsabilidad del usuario final, y no del autor. Este proyecto tiene como objetivo inicial demostrar las capacidades de Rust como lenguaje para el desarrollo de malware en entornos controlados. 
+<img src="https://img.shields.io/badge/r3li4nt.contact@keemail.me-B70000?style=for-the-badge&logo=gmail&logoColor=white" />
 
 <h1 align="center"></h1>
 

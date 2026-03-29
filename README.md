@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img width="250" height="400" alt="RavenRAT" src="https://github.com/user-attachments/assets/236c245b-8812-4721-a428-7a7e5119773b" />
+  <img width="300" height="450" alt="RavenRAT" src="https://github.com/user-attachments/assets/236c245b-8812-4721-a428-7a7e5119773b" />
 </p>
 
 

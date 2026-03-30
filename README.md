@@ -54,6 +54,8 @@ El archivo `ravendoor_key.txt` es generado en la ruta `AppData\Roaming\Microsoft
 
 <img width="492" height="303" alt="process_injection-3" src="https://github.com/user-attachments/assets/30fa929b-0568-46a3-9e0b-82bba0ca623b" />
 
+<img width="1919" height="923" alt="process_injection-2" src="https://github.com/user-attachments/assets/c9264b4b-f7fb-4df1-8874-48bfaebbe083" />
+
 <h1 align="center"></h1>
 
 <img src="https://img.shields.io/badge/DROPPER:-B70000.svg"> Módulo auxiliar para gestionar artefactos en disco: extrae y oculta archivos embebidos, crea copias de DLLs legítimas para técnicas de sideloading, limpia rastros temporales y detecta entornos de análisis (sandbox) mediante identificación de procesos típicos (`vboxservice.exe`, `vmtoolsd.exe`) o características de hardware, permitiendo abortar la ejecución en contextos no deseados.

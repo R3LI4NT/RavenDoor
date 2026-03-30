@@ -21,7 +21,7 @@
 
 <h1 align="center"></h1>
 
-### Características de `RavenDoor v1.0`:
+### Características `v1.0`:
 
 <img src="https://img.shields.io/badge/COMUNICACIÓN:-B70000.svg"> Genera una llave (AES-256-CBC) **ÚNICA** para cada usuario infectado. Con este cifrado, los firewalls, sistemas IDS/IPS o herramientas de monitoreo de red no podrán detectar los comandos en texto plano que envía el atacante, evitando activar alertas. Se implemento el algoritmo AES-256 para transformar estos comandos reconocibles en flujos de bytes aleatorios, mientras que el CBC asegura que incluso comandos idénticos produzcan salidas cifradas diferentes, eliminando patrones repetitivos que podrían servir como firmas de detección.
 
@@ -48,28 +48,25 @@ El archivo `ravendoor_key.txt` es generado en la ruta `AppData\Roaming\Microsoft
 
 <h1 align="center"></h1>
 
-### Modo de uso
+### Características `v2.0`:
 
-- (1) Tener instalado Rust: https://rust-lang.org/tools/install/
+<img src="https://img.shields.io/badge/DLL_INJECTION:-B70000.svg"> Extrae una DLL embebida en el ejecutable, la escribe en disco en una ubicación discreta y la inyecta en procesos legítimos del sistema (como `explorer.exe`, `notepad.exe`, etc). Prioriza el uso de indirect syscalls para las operaciones críticas, con fallback automático a WinAPI para garantizar compatibilidad. Una vez inyectada, la DLL establece su propia conexión con el C2, permitiendo mantener el control incluso si el proceso principal es detectado o finaliza.
 
-- (2) Modificar los archivos `config.toml`, `main.rs` y `config.rs` para agregar nuestras IPs y puerto a escuchar.
+<h1 align="center"></h1>
 
-<img width="351" height="118" alt="4-0" src="https://github.com/user-attachments/assets/c5ac7947-1a06-495c-ba76-eb5d3a32e04e" />
+<img src="https://img.shields.io/badge/DROPPER:-B70000.svg"> Módulo auxiliar para gestionar artefactos en disco: extrae y oculta archivos embebidos, crea copias de DLLs legítimas para técnicas de sideloading, limpia rastros temporales y detecta entornos de análisis (sandbox) mediante identificación de procesos típicos (`vboxservice.exe`, `vmtoolsd.exe`) o características de hardware, permitiendo abortar la ejecución en contextos no deseados.
 
-<img width="523" height="156" alt="4-1" src="https://github.com/user-attachments/assets/9cedc726-d38f-475e-953c-c146ae731248" />
+<h1 align="center"></h1>
 
-<img width="584" height="189" alt="4-2" src="https://github.com/user-attachments/assets/33b16a54-a3a6-4509-9fde-9094557c649c" />
+<img src="https://img.shields.io/badge/SLEEP OBFUSCATION:-B70000.svg"> Implementa una técnica de ofuscación temporal que evita patrones de espera predecibles. En lugar de usar `Sleep()`, emplea `NtDelayExecution`, una llamada directa al kernel que reduce la dependencia de APIs más monitoreadas. Además, introduce **jitter dinámico**, haciendo que cada pausa tenga una duración variable dentro de un rango configurable, dificultando la detección basada en comportamiento. Durante los períodos de inactividad, el módulo puede proteger regiones críticas de memoria cambiando sus permisos (`PAGE_NOACCESS`) y cifrando su contenido temporalmente, restaurando ambos al despertar. Esto reduce la superficie de ataque y minimiza la exposición de datos sensibles mientras el proceso no está activo.
 
-- (3) Generar un Bot en Telegram y agregar el Token y ChatID en el archivo telegram.rs.
+<h1 align="center"></h1>
 
-<img width="408" height="138" alt="5" src="https://github.com/user-attachments/assets/9d97ea5c-8d85-4ee3-bdaa-a79a8f88a98c" />
+<img src="https://img.shields.io/badge/INDIRECT SYSCALLS:-B70000.svg"> Implementa un método de ejecución de llamadas al sistema que evita las rutas tradicionales de las APIs de Windows, reduciendo la visibilidad ante soluciones de seguridad. En lugar de usar funciones como `GetProcAddress`, localiza manualmente `ntdll.dll` recorriendo la estructura PEB del proceso, analiza su tabla de exportaciones para obtener las direcciones de funciones clave y extrae los números de syscall directamente desde el código de estas. Luego, en lugar de ejecutar la syscall de forma directa, redirige el flujo de ejecución hacia la instrucción `syscall` dentro de `ntdll.dll`, haciendo que el origen de la llamada parezca legítimo. Esto evita los hooks en capas de usuario, no deja rastros de imports estáticos y dificulta la detección por parte de sistemas de monitoreo, permitiendo que las operaciones críticas pasen desapercibidas.
 
-**IMPORTANTE:** La función `create_bot_from_env` no debe ser modificada por el Token ni ChatID.
+<h1 align="center"></h1>
 
-- (4) Compilar proyecto en modo release desde la raíz.
-```
-cargo build --release
-```
+<img src="https://img.shields.io/badge/TOKEN_GENERATOR:-B70000.svg"> Incluye una utilidad en Python que ofusca automáticamente las credenciales del bot de Telegram. El script toma el token y el chat ID como entrada y genera código Rust con múltiples capas de ofuscación: codificación hexadecimal, XOR con clave fija, desplazamiento de caracteres o fragmentación. Esto evita que las credenciales aparezcan en texto plano dentro del binario final, dificultando el análisis estático.
 
 <h1 align="center"></h1>
 

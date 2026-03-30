@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/ed8e2af1-83ba-43b2-b31e-1504e910af84" alt="RavenDoor" Logo" />
+  <img src="https://github.com/user-attachments/assets/0433af62-a837-4b78-bcc3-71445c7de5cd" alt="RavenDoor" Logo" />
 </p>
 
 <p align="center">
-  <img width="300" height="450" alt="RavenRAT" src="https://github.com/user-attachments/assets/236c245b-8812-4721-a428-7a7e5119773b" />
+  <img width="300" height="450" alt="RavenRAT" src="https://github.com/user-attachments/assets/ed8e2af1-83ba-43b2-b31e-1504e910af84" />
 </p>
 
 

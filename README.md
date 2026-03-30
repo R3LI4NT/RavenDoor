@@ -44,7 +44,7 @@ python3 raven_client.py --key [KEY]
 
 El archivo `ravendoor_key.txt` es generado en la ruta `AppData\Roaming\Microsoft\Windows` y es envíado al canal de telegram para su posterior uso.
 
-<img width="510" height="214" alt="3" src="https://github.com/user-attachments/assets/6bedc1d2-39af-4910-813b-c7ead251b0d2" />
+<img width="489" height="258" alt="telegram" src="https://github.com/user-attachments/assets/da29a2be-55e7-4513-ac11-258b7ff766b8" />
 
 <h1 align="center"></h1>
 

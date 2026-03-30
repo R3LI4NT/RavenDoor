@@ -75,6 +75,8 @@ El archivo `ravendoor_key.txt` es generado en la ruta `AppData\Roaming\Microsoft
 
 <img src="https://img.shields.io/badge/TOKEN_GENERATOR:-B70000.svg"> Incluye una utilidad en Python que ofusca automáticamente las credenciales del bot de Telegram. El script toma el token y el chat ID como entrada y genera código Rust con múltiples capas de ofuscación: codificación hexadecimal, XOR con clave fija, desplazamiento de caracteres o fragmentación. Esto evita que las credenciales aparezcan en texto plano dentro del binario final, dificultando el análisis estático.
 
+<img width="1097" height="290" alt="token-generate" src="https://github.com/user-attachments/assets/15dc2584-e0b8-4884-8036-0cd35f3a50d0" />
+
 <h1 align="center"></h1>
 
 Correo de contacto:

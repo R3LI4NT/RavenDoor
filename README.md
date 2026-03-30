@@ -52,6 +52,8 @@ El archivo `ravendoor_key.txt` es generado en la ruta `AppData\Roaming\Microsoft
 
 <img src="https://img.shields.io/badge/DLL_INJECTION:-B70000.svg"> Extrae una DLL embebida en el ejecutable, la escribe en disco en una ubicación discreta y la inyecta en procesos legítimos del sistema (como `explorer.exe`, `notepad.exe`, etc). Prioriza el uso de indirect syscalls para las operaciones críticas, con fallback automático a WinAPI para garantizar compatibilidad. Una vez inyectada, la DLL establece su propia conexión con el C2, permitiendo mantener el control incluso si el proceso principal es detectado o finaliza.
 
+<img width="492" height="303" alt="process_injection-3" src="https://github.com/user-attachments/assets/30fa929b-0568-46a3-9e0b-82bba0ca623b" />
+
 <h1 align="center"></h1>
 
 <img src="https://img.shields.io/badge/DROPPER:-B70000.svg"> Módulo auxiliar para gestionar artefactos en disco: extrae y oculta archivos embebidos, crea copias de DLLs legítimas para técnicas de sideloading, limpia rastros temporales y detecta entornos de análisis (sandbox) mediante identificación de procesos típicos (`vboxservice.exe`, `vmtoolsd.exe`) o características de hardware, permitiendo abortar la ejecución en contextos no deseados.

@@ -79,6 +79,14 @@ El archivo `ravendoor_key.txt` es generado en la ruta `AppData\Roaming\Microsoft
 
 <h1 align="center"></h1>
 
+<img src="https://img.shields.io/badge/ANTI SANDBOX:-B70000.svg">
+
+Implementa un sistema de detección de entornos de análisis basado en puntuación que combina múltiples indicadores del sistema: procesos relacionados a virtualización o monitoreo, presencia de drivers y artefactos característicos, claves de registro, información de hardware y comportamiento de recursos (memoria, CPU, disco y resolución). También incluye detección de debuggers y herramientas de sandbox.
+
+Cada señal suma a un puntaje global; al superar un umbral predefinido, el módulo asume que se encuentra en un entorno controlado y aborta la ejecución de forma silenciosa. Este enfoque evita depender de un único indicador y reduce falsos positivos en entornos legítimos.
+
+<h1 align="center"></h1>
+
 Correo de contacto:
 
 <img src="https://img.shields.io/badge/r3li4nt.contact@keemail.me-B70000?style=for-the-badge&logo=gmail&logoColor=white" />

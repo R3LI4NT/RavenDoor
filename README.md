@@ -3,9 +3,8 @@
 </p>
 
 <p align="center">
-  <img width="300" height="450" alt="RavenRAT" src="https://github.com/user-attachments/assets/ed8e2af1-83ba-43b2-b31e-1504e910af84" />
+  <img width="300" height="450" alt="RavenRAT" src="https://github.com/user-attachments/assets/e85480d4-f9d0-4866-9115-8b851b29fe62" />
 </p>
-
 
 <p align="center">
    <a href="https://dotnet.microsoft.com/">

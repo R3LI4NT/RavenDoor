@@ -79,7 +79,7 @@ El archivo `ravendoor_key.txt` es generado en la ruta `AppData\Roaming\Microsoft
 
 <h1 align="center"></h1>
 
-<img src="https://img.shields.io/badge/VPS Server:-B70000.svg"> Tiene contratado un servicio VPS seguro con ubicación en un país conflictivo. El hecho de que se utilice un VPS localizado en un país con este tipo de contexto puede proporcionarle cierta cobertura jurídica y operativa, ya que las agencias de inteligencia pueden enfrentar mayores dificultades para requerir datos y coordinar acciones, lo que introduce demoras y fricción en el proceso investigativo. No obstante, esto no imposibilita el rastreo, sino que, en todo caso, puede dificultar el trabajo de las agencias y alargar los tiempos necesarios para avanzar en la investigación.
+<img src="https://img.shields.io/badge/VPS SERVER:-B70000.svg"> Tiene contratado un servicio VPS seguro con ubicación en un país conflictivo. El hecho de que se utilice un VPS localizado en un país con este tipo de contexto puede proporcionarle cierta cobertura jurídica y operativa, ya que las agencias de inteligencia pueden enfrentar mayores dificultades para requerir datos y coordinar acciones, lo que introduce demoras y fricción en el proceso investigativo. No obstante, esto no imposibilita el rastreo, sino que, en todo caso, puede dificultar el trabajo de las agencias y alargar los tiempos necesarios para avanzar en la investigación.
 
 <img width="1082" height="642" alt="VPS-Server" src="https://github.com/user-attachments/assets/5aed183d-d14e-4755-b73f-739d1fbe7f3c" />
 

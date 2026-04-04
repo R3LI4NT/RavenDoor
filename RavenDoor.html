@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>RavenDoor | Backdoor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/ravendoor-icon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="particleCanvas"></canvas>
+  <div class="cyber-grid"></div>
+
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fa-brands fa-rust"></i>
+      <span>RavenDoor</span>
+    </div>
+    <div class="nav-links">
+      <a href="#v1">v1.0</a>
+      <a href="#v2">v2.0</a>
+      <a href="#c2-panel">C2</a>
+      <a href="#contact">Contacto</a>
+    </div>
+    <div class="mobile-menu-btn" id="mobileMenuBtn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-close" id="mobileMenuClose">&times;</div>
+    <a href="#v1">v1.0</a>
+    <a href="#v2">v2.0</a>
+    <a href="#c2-panel">C2</a>
+    <a href="#contact">Contacto</a>
+  </div>
+
+  <div class="hero">
+    <div class="glitch-title">
+      <span data-text="RAVENDOOR">RAVENDOOR</span>
+    </div>
+    <div class="hero-logo-under">
+      <img src="https://github.com/user-attachments/assets/e85480d4-f9d0-4866-9115-8b851b29fe62" width="130" style="border-radius: 20px;" alt="raven" class="clickable-img">
+    </div>
+    <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto; color: #aaa;">Backdoor de alto nivel para sistemas Windows</p>
+    <div class="badge-container">
+      <div class="badge"><i class="fab fa-rust"></i> Rust Backdoor</div>
+      <div class="badge"><i class="fab fa-windows"></i> Windows</div>
+      <div class="badge"><i class="fas fa-code-branch"></i> v2.0</div>
+      <div class="badge"><i class="fa-solid fa-lock"></i>Private</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <section id="v1" class="version-section">
+      <div class="version-header">
+        <div class="version-badge">v1.0</div>
+        <div class="version-sub">—— Comuniación cifrada · Persistencia · C2</div>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-neon">
+          <i class="fas fa-lock feature-icon"></i>
+          <div class="feature-title">AES-256-CBC · Comms Sigilosas <span class="tag">Anti-IDS/IPS</span></div>
+          <div class="feature-desc">Clave única por víctima. El flujo cifrado evita firmas de red y patrones repetitivos. IV rotatorio en cada handshake, transformando comandos en bytes aleatorios indetectables.</div>
+          <div class="code-snip">[+] Key derivation: PBKDF2 + unique salt<br>[+] CBC mode: identical commands → different ciphertext</div>
+        </div>
+        <div class="feature-neon">
+          <i class="fas fa-database feature-icon"></i>
+          <div class="feature-title">Persistencia Multi-Mecanismo <span class="tag">Registry · Startup · Service</span></div>
+          <div class="feature-desc">Registro (HKCU\Run), carpeta Startup, tarea programada con SYSTEM, o servicio de Windows. Fallback automático si un método es bloqueado, asegurando reinicio post-reboot.</div>
+          <div class="code-snip">// auto-elevate & install<br>if registry_fails: create_scheduled_task()</div>
+        </div>
+        <div class="feature-neon">
+          <i class="fas fa-terminal feature-icon"></i>
+          <div class="feature-title">C2 Python + Telegram Exfiltración</div>
+          <div class="feature-desc">Servidor C2 interactivo con gestión multi-cliente. La clave AES se genera y se guarda en %AppData%\Microsoft\Windows\ravendoor_key.txt, enviada automáticamente por Telegram para control remoto.</div>
+          <div class="code-snip">$ python3 raven_client.py --key [MASTER_KEY] <br>▶ Clientes conectados: 3 | Shell interactiva cifrada</div>
+        </div>
+      </div>
+      <div class="screenshot-showcase">
+        <div class="screenshot-card">
+          <img src="https://github.com/user-attachments/assets/67130bbe-6acf-47c7-80a3-53f149127eb7" alt="cifrado" class="clickable-img">
+          <div class="caption">AES-256-CBC en acción · Paquetes cifrados</div>
+        </div>
+        <div class="screenshot-card">
+          <img src="https://github.com/user-attachments/assets/dc240f51-a21a-4bac-adbf-1998ef5dc11e" alt="C2 panel" class="clickable-img">
+          <div class="caption">C2 Panel · Gestión de zombis</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="v2" class="version-section">
+      <div class="version-header">
+        <div class="version-badge">v2.0</div>
+        <div class="version-sub">—— Inyección DLL · Syscalls · Anti-sandbox · Sleep Ofuscación · VPS Server</div>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-neon">
+          <i class="fas fa-syringe feature-icon"></i>
+          <div class="feature-title">DLL Injection + Indirect Syscalls <span class="tag">NTAPI</span></div>
+          <div class="feature-desc">Extrae DLL embebida, escribe en disco e inyecta en procesos legítimos (explorer.exe, notepad.exe). Usa indirect syscalls para evadir hooks de EDR. Si falla, recurre a WinAPI.</div>
+          <div class="code-snip">→ PEB walk → syscall stub inside ntdll → call original</div>
+        </div>
+        <div class="feature-neon">
+          <i class="fas fa-hourglass-half feature-icon"></i>
+          <div class="feature-title">Sleep Obfuscation · Jitter Dinámico</div>
+          <div class="feature-desc">NtDelayExecution + variación de tiempo (jitter). Durante la inactividad, protege memoria crítica con PAGE_NOACCESS y cifra datos sensibles, restaurando al despertar.</div>
+          <div class="code-snip">sleep_base = 60000 ± random(20000)<br>VirtualProtect(PAGE_NOACCESS); encrypt_region();</div>
+        </div>
+        <div class="feature-neon">
+          <i class="fas fa-robot feature-icon"></i>
+          <div class="feature-title">Anti-Sandbox Scoring System</div>
+          <div class="feature-desc">Detección por procesos (vboxservice, vmtoolsd), hardware, memoria reducida, CPU cores, artefactos de registro y debuggers. Puntaje umbral: aborta silenciosamente.</div>
+          <div class="code-snip">if sandbox_score > THRESHOLD: TerminateProcess()</div>
+        </div>
+        <div class="feature-neon">
+          <i class="fas fa-droplet feature-icon"></i>
+          <div class="feature-title">Dropper & Sideloading</div>
+          <div class="feature-desc">Extrae artefactos ocultos, crea copias de DLLs legítimas para sideloading, limpia rastros y detecta entornos de análisis temprano.</div>
+        </div>
+        <div class="feature-neon">
+          <i class="fas fa-mask feature-icon"></i>
+          <div class="feature-title">Token Generator · Ofuscación de credenciales</div>
+          <div class="feature-desc">Script Python que ofusca token de Telegram y chat ID en código Rust: capas de XOR, desplazamiento de caracteres, codificación hexadecimal, fragmentación.</div>
+          <div class="code-snip">python token_gen.py --token BOT_TOKEN --chat CHAT_ID → Rust obfuscated constants</div>
+        </div>
+        <div class="feature-neon">
+          <i class="fas fa-bolt feature-icon"></i>
+          <div class="feature-title">Indirect Syscalls · Full PEB Walk</div>
+          <div class="feature-desc">Localiza ntdll.dll mediante PEB, extrae números de syscall y redirige flujo hacia la instrucción syscall dentro de ntdll, sin imports estáticos.</div>
+          <div class="code-snip">NtAllocateVirtualMemory, NtWriteVirtualMemory, NtCreateThreadEx</div>
+        </div>
+      </div>
+      <div class="screenshot-showcase">
+        <div class="screenshot-card">
+          <img src="https://github.com/user-attachments/assets/30fa929b-0568-46a3-9e0b-82bba0ca623b" alt="dll injection" class="clickable-img">
+          <div class="caption">Lista de procesos a inyectar</div>
+        </div>
+        <div class="screenshot-card">
+          <img src="https://github.com/user-attachments/assets/c9264b4b-f7fb-4df1-8874-48bfaebbe083" alt="syscalls" class="clickable-img">
+          <div class="caption">DLL Inyectada</div>
+        </div>
+        <div class="screenshot-card">
+          <img src="https://github.com/user-attachments/assets/1472afa7-7772-4132-bc99-f7bcecbd8bc1" alt="inyeccion" class="clickable-img">
+          <div class="caption">Múltiples inyecciones</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="c2-panel" class="version-section">
+      <div class="version-header">
+        <div class="version-badge">C2 ARSENAL</div>
+        <div class="version-sub">—— Command & Control Server · Cliente Rust / Python</div>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-neon">
+          <i class="fab fa-python feature-icon"></i>
+          <div class="feature-title">C2 Python Multi-Client</div>
+          <div class="feature-desc">Escucha conexiones entrantes, listado de agentes, selección interactiva y envío de comandos con shell remota completamente cifrada con AES-256-CBC.</div>
+          <div class="code-snip">> clients<br>  [0] 192.168.1.105:54321 | WIN-DESKTOP<br>  [1] 10.0.0.22:49162 | SERVER-CORP<br> > interact 0 → $ whoami</div>
+        </div>
+        <div class="feature-neon">
+          <i class="fas fa-globe feature-icon"></i>
+          <div class="feature-title">VPS Server Estratégico</div>
+          <div class="feature-desc">Infraestructura alojada en país con jurisdicción conflictiva, lo que introduce fricción investigativa y demoras a agencias de inteligencia.</div>
+          <img src="https://github.com/user-attachments/assets/5aed183d-d14e-4755-b73f-739d1fbe7f3c" style="width:100%; border-radius: 16px; margin-top: 10px;" class="clickable-img">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="version-section">
+      <div class="version-header">
+        <div class="version-badge">CONTACT</div>
+        <div class="version-sub">—— Developer</div>
+      </div>
+      <div class="vps-card">
+        <div class="contact-bar" id="contactBar">
+          <span style="font-family: monospace;">r3li4nt.contact@keemail.me</span>
+          <i class="fas fa-copy" id="copyContactBtn" style="cursor: pointer;"></i>
+        </div>
+        <p style="margin-top: 1.5rem; font-family: 'Fira Code';"><i class="fa-brands fa-github"></i> Developer: <strong style="color:#b70000;">~R3LI4NT~</strong></p>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <p>RavenDoor © 2026 — Backdoor Windows</p>
+  </footer>
+
+  <div class="image-modal" id="imageModal">
+    <div class="modal-content">
+      <span class="modal-close" id="modalClose">&times;</span>
+      <img class="modal-image" id="modalImage" src="" alt="Imagen expandida">
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

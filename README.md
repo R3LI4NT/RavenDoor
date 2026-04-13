@@ -92,7 +92,7 @@ Cada señal suma a un puntaje global; al superar un umbral predefinido, el módu
 
 <h1 align="center"></h1>
 
-<img src="https://img.shields.io/badge/C2 WEB:-B70000.svg"> Además del tradicional C2 CLI, se ha desarrollado un panel web profesional que permite controlar los equipos infectados de forma más flexible mediante un sistema multi-usuario por roles (Administrador y Operador). El Administrador tiene control total sobre el servidor C2 y puede crear y gestionar operadores, cada uno con su propia clave AES única, lo que garantiza que los operadores solo puedan ver y controlar los clientes que utilizan su clave específica, logrando un completo aislamiento entre diferentes operadores dentro de la misma infraestructura.
+<img src="https://img.shields.io/badge/C2 WEB:-B70000.svg"> Además del tradicional C2 CLI, se ha desarrollado un C2 Web que permite controlar los equipos infectados de forma más flexible mediante un sistema multi-usuario por roles (Administrador y Operador). El Administrador tiene control total sobre el servidor C2 y puede crear y gestionar operadores, cada uno con su propia clave AES única, lo que garantiza que los operadores solo puedan ver y controlar los clientes que utilizan su clave específica, logrando un completo aislamiento entre diferentes operadores dentro de la misma infraestructura.
 
 <img width="1922" height="1047" alt="capture-1" src="https://github.com/user-attachments/assets/625d8b4e-590e-4fbd-a0e1-ccdda7d862bd" />
 

@@ -34,7 +34,7 @@
 
 <h1 align="center"></h1>
 
-<img src="https://img.shields.io/badge/C2:-B70000.svg"> Se desarrollo un C2 (Command & Control) en Python para escuchar las conexiones entrantes, gestiona múltiples clientes, permite seleccionar un cliente y enviarle comandos interactivos. La comunicación esta cifrada con AES-256 en modo CBC, usando una clave compartida pasada por parámetro y un IV que el cliente envía en el handshake. 
+<img src="https://img.shields.io/badge/C2 CLI:-B70000.svg"> Se desarrollo un C2 (Command & Control) CLI en Python para escuchar las conexiones entrantes, gestiona múltiples clientes, permite seleccionar un cliente y enviarle comandos interactivos. La comunicación esta cifrada con AES-256 en modo CBC, usando una clave compartida pasada por parámetro y un IV que el cliente envía en el handshake. 
 
 **USO:**
 ```bash
@@ -89,6 +89,16 @@ El archivo `ravendoor_key.txt` es generado en la ruta `AppData\Roaming\Microsoft
 <img src="https://img.shields.io/badge/ANTI SANDBOX:-B70000.svg"> Implementa un sistema de detección de entornos de análisis basado en puntuación que combina múltiples indicadores del sistema: procesos relacionados a virtualización o monitoreo, presencia de drivers y artefactos característicos, claves de registro, información de hardware y comportamiento de recursos (memoria, CPU, disco y resolución). También incluye detección de debuggers y herramientas de sandbox.
 
 Cada señal suma a un puntaje global; al superar un umbral predefinido, el módulo asume que se encuentra en un entorno controlado y aborta la ejecución de forma silenciosa. Este enfoque evita depender de un único indicador y reduce falsos positivos en entornos legítimos.
+
+<h1 align="center"></h1>
+
+<img src="https://img.shields.io/badge/C2 WEB:-B70000.svg"> Además del tradicional C2 CLI, se ha desarrollado un panel web profesional que permite controlar los equipos infectados de forma más flexible mediante un sistema multi-usuario por roles (Administrador y Operador). El Administrador tiene control total sobre el servidor C2 y puede crear y gestionar operadores, cada uno con su propia clave AES única, lo que garantiza que los operadores solo puedan ver y controlar los clientes que utilizan su clave específica, logrando un completo aislamiento entre diferentes operadores dentro de la misma infraestructura.
+
+<img width="1922" height="1047" alt="capture-1" src="https://github.com/user-attachments/assets/625d8b4e-590e-4fbd-a0e1-ccdda7d862bd" />
+
+<img width="1922" height="1047" alt="capture-2" src="https://github.com/user-attachments/assets/0b0fe857-a2ea-4dd1-87f7-267cc79d3243" />
+
+<img width="1922" height="1047" alt="capture-3" src="https://github.com/user-attachments/assets/1ab2e334-fca4-4822-a0b6-6a60943e5b49" />
 
 <h1 align="center"></h1>
 

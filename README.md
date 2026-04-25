@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img width="300" height="330" alt="RavenRAT" src="https://github.com/user-attachments/assets/e85480d4-f9d0-4866-9115-8b851b29fe62" />
+  <img width="300" height="330" alt="RavenDoor" src="https://github.com/user-attachments/assets/e85480d4-f9d0-4866-9115-8b851b29fe62" />
 </p>
 
 <p align="center">
@@ -23,7 +23,7 @@
 <h1 align="center"></h1>
 
 <p align="center">
-  <img width="700" height="auto" alt="RavenRAT" src="https://raw.githubusercontent.com/R3LI4NT/RavenDoor/refs/heads/main/banner.png" />
+  <img width="700" height="auto" alt="RavenDoor" src="https://raw.githubusercontent.com/R3LI4NT/RavenDoor/refs/heads/main/banner.png" />
 </p>
 
 ### Características `v1.0`:

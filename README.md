@@ -22,10 +22,6 @@
 
 <h1 align="center"></h1>
 
-<p align="center">
-  <img width="700" height="auto" alt="RavenDoor" src="https://raw.githubusercontent.com/R3LI4NT/RavenDoor/refs/heads/main/banner.png" />
-</p>
-
 ### Características `v1.0`:
 
 <img src="https://img.shields.io/badge/COMUNICACIÓN:-B70000.svg"> Genera una llave (AES-256-CBC) **ÚNICA** para cada usuario infectado. Con este cifrado, los firewalls, sistemas IDS/IPS o herramientas de monitoreo de red no podrán detectar los comandos en texto plano que envía el atacante, evitando activar alertas. Se implemento el algoritmo AES-256 para transformar estos comandos reconocibles en flujos de bytes aleatorios, mientras que el CBC asegura que incluso comandos idénticos produzcan salidas cifradas diferentes, eliminando patrones repetitivos que podrían servir como firmas de detección.
@@ -103,6 +99,12 @@ Cada señal suma a un puntaje global; al superar un umbral predefinido, el módu
 <img width="1922" height="1047" alt="capture-2" src="https://github.com/user-attachments/assets/0b0fe857-a2ea-4dd1-87f7-267cc79d3243" />
 
 <img width="1922" height="1047" alt="capture-3" src="https://github.com/user-attachments/assets/1ab2e334-fca4-4822-a0b6-6a60943e5b49" />
+
+<h1 align="center"></h1>
+
+<p align="center">
+  <img width="700" height="auto" alt="RavenDoor" src="https://raw.githubusercontent.com/R3LI4NT/RavenDoor/refs/heads/main/banner.png" />
+</p>
 
 <h1 align="center"></h1>
 

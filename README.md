@@ -22,6 +22,10 @@
 
 <h1 align="center"></h1>
 
+<p align="center">
+  <img width="700" height="auto" alt="RavenRAT" src="[https://github.com/user-attachments/assets/e85480d4-f9d0-4866-9115-8b851b29fe62](https://github.com/R3LI4NT/RavenDoor/blob/main/banner.png)" />
+</p>
+
 ### Características `v1.0`:
 
 <img src="https://img.shields.io/badge/COMUNICACIÓN:-B70000.svg"> Genera una llave (AES-256-CBC) **ÚNICA** para cada usuario infectado. Con este cifrado, los firewalls, sistemas IDS/IPS o herramientas de monitoreo de red no podrán detectar los comandos en texto plano que envía el atacante, evitando activar alertas. Se implemento el algoritmo AES-256 para transformar estos comandos reconocibles en flujos de bytes aleatorios, mientras que el CBC asegura que incluso comandos idénticos produzcan salidas cifradas diferentes, eliminando patrones repetitivos que podrían servir como firmas de detección.
